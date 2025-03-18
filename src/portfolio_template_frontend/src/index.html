@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
+        .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -390,11 +404,13 @@
         
     </style>
 </head>
-<body>
-    <div style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
- <video src="images/bg.mp4" width="100%" height="100%" autoplay>
- Your browser does not support the video tag.
- </video>
+<body style="height: 100%;width: 100%">
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="images/bg1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="container">
         <!-- The rest of your HTML content goes here -->
         <div class="header">
