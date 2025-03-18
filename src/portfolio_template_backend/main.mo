@@ -19,7 +19,7 @@ actor WebsiteBackend {
 
   // Query: Greet a visitor (optional function)
   public query func greet() : async Text {
-    let message = "mga stalker ko: " # Nat.toText(visitCount);
+    let message = "Mga stalker ko: " # Nat.toText(visitCount);
     Debug.print("Greet called. Message: " # message);
     return message;
   };
